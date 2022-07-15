@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom";
-import Header from "./header";
+import App from "./app";
 
 function Componente(){
     return(
-        <Header/>
+        <App></App>
     )
 }
 
