@@ -1,6 +1,7 @@
 import Header from "./header";
 import Storys from "./storys";
 import Posts from "./posts";
+import Sidebar from "./sidebar";
 
 export default function App(){
     return(
@@ -12,6 +13,7 @@ export default function App(){
                     <Posts></Posts>
                 </div>
             </div>
+            <Sidebar></Sidebar>
         </div>
     )
 }
