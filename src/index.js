@@ -1,8 +1,9 @@
 import ReactDOM from "react-dom";
+import Header from "./header";
 
 function Componente(){
     return(
-        <h1>Teste</h1>
+        <Header/>
     )
 }
 
