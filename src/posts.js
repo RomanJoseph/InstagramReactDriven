@@ -1,7 +1,7 @@
-export default function Posts() {
+function Posts() {
     const postData = [{ user: "meowed", userImage: "assets/img/meowed.svg", content: "assets/img/gato-telefone.svg", userLikedImage: "assets/img/respondeai.svg", userLiked: "respondeai", likes: "101.523" }, { user: "barked", userImage: "assets/img/barked.svg", content: "assets/img/dog.svg", userLikedImage: "assets/img/adorable_animals.svg", userLiked: "adorable_animals.svg", likes: "299.792.458" }]
     return (
-        postData.map((post) => {
+        postData.map((post,i) => {
             return (
                     <div class="post">
                         <div class="topo">
@@ -15,13 +15,28 @@ export default function Posts() {
                         </div>
 
                         <div class="conteudo">
-                            <img src={post.content} />
+                            <img src={post.content} onClick={()=> {
+                                const like = document.querySelectorAll(".like")
+                                if(like[i].name === "heart-outline"){
+                                    like[i].name = "heart";
+                                    like[i].classList.add("red")
+                                }
+                            }}/>
                         </div>
 
                         <div class="fundo">
                             <div class="acoes">
                                 <div>
-                                    <ion-icon name="heart-outline"></ion-icon>
+                                    <ion-icon name="heart-outline" class="like" onClick={(like) => {
+                                        if(like.target.name === "heart-outline"){
+                                            like.target.name = "heart";
+                                            like.target.classList.add("red")
+                                        }else{
+                                            like.target.name ="heart-outline"
+                                            like.target.classList.remove("red")
+                                        }
+                                    
+                                    }}></ion-icon>
                                     <ion-icon name="chatbubble-outline"></ion-icon>
                                     <ion-icon name="paper-plane-outline"></ion-icon>
                                 </div>
@@ -40,5 +55,12 @@ export default function Posts() {
                     </div>
             )
         })
+    )
+}
+export default function Post(){
+    return(
+        <div class="posts">
+            <Posts></Posts>
+        </div>
     )
 }

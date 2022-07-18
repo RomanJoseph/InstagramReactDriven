@@ -22,6 +22,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .navbar ion-icon, .navbar img {
@@ -192,6 +193,10 @@ body {
 
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
+}
+
+.red{
+  color:red;
 }
 
 .post .fundo .curtidas {

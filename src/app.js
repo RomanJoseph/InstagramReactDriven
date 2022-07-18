@@ -1,19 +1,13 @@
 import Header from "./header";
-import Storys from "./storys";
-import Posts from "./posts";
-import Sidebar from "./sidebar";
+import Body from "./body";
+import BackgroundMobile from "./backgroundMobile";
 
 export default function App(){
     return(
-        <div class="corpo">
-            <Header></Header>
-            <div class="esquerda">
-                <Storys></Storys>
-                <div class="posts">
-                    <Posts></Posts>
-                </div>
-            </div>
-            <Sidebar></Sidebar>
-        </div>
+        <>
+        <Header></Header>
+        <Body></Body>
+        <BackgroundMobile></BackgroundMobile>
+        </>
     )
 }
