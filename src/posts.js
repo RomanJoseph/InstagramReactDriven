@@ -127,7 +127,7 @@ function BuildFeed() {
     return (
         postData.map((postData) => {
             return (
-                <Posts userImage={postData.userImage} user={postData.user} content={postData.content} userLikedImage={postData.userLikedImage} userLiked={postData.userLiked} likes={postData.likes} heart="heart-outline" color=""></Posts>
+                <Posts userImage={postData.userImage} user={postData.user} content={postData.content} userLikedImage={postData.userLikedImage} userLiked={postData.userLiked} likes={postData.likes}></Posts>
             )
         })
     )
