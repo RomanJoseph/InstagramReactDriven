@@ -3,7 +3,7 @@ import App from "./app";
 
 function Componente(){
     return(
-        <App></App>
+    <App></App>
     )
 }
 
